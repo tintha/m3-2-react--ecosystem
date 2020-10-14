@@ -4,17 +4,23 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
+import { useParams } from "react-router";
 
 import Header from './Header';
 import Home from './Home';
 import About from './About';
+import ItemDetails from './ItemDetails';
+
+function ItemPost() {
+  let { itemId } = useParams()
+  return <ItemDetails itemId={itemId}/>
+}
 
 const App = (props) => {
-  return (
+   return (
     <div>
       <Router>
       <Header />
-     
         <div>
           <Switch>
             <Route exact path="/">
@@ -23,7 +29,9 @@ const App = (props) => {
             <Route exact path="/about">
               <About />
             </Route>
-            <Route exatc path="/items/:itemId"></Route>
+            <Route path="/:itemId">
+              <ItemPost />
+             </Route>
           </Switch>
         </div>
       </Router>
