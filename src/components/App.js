@@ -4,17 +4,11 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import { useParams } from "react-router";
 
 import Header from './Header';
 import Home from './Home';
 import About from './About';
 import ItemDetails from './ItemDetails';
-
-function ItemPost() {
-  let { itemId } = useParams()
-  return <ItemDetails itemId={itemId}/>
-}
 
 const App = (props) => {
    return (
@@ -30,7 +24,7 @@ const App = (props) => {
               <About />
             </Route>
             <Route path="/items/:itemId">
-              <ItemPost />
+            <ItemDetails />
              </Route>
           </Switch>
         </div>
