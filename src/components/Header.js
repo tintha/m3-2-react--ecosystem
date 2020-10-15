@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Title = styled.h1`
@@ -18,7 +19,7 @@ const NavLinks = styled.div`
     // style later
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
   color: #4350e0;
   font-weight: bold;
   font-size: 16px;
@@ -42,8 +43,8 @@ const Header = () => {
             <NavBar>
                 <Title>Fruit Emporium</Title>
             <NavLinks>
-                <StyledLink to="/">Home</StyledLink>
-                <StyledLink to="/about">About</StyledLink>          
+                <StyledLink exact to="/" activeStyle={{color: '#b16fbf', textDecoration: 'underline', fontWeight: 'bolder'}}>Home</StyledLink>
+                <StyledLink exact to="/about" activeStyle={{color: '#b16fbf', textDecoration: 'underline', fontWeight: 'bolder'}}>About</StyledLink>          
             </NavLinks>            
             </NavBar>
         </header>

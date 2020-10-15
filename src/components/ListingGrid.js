@@ -20,7 +20,7 @@ const FruitContainer = styled.div`
 const ListingGrid = ({ itemList }) => {
     return <div>
         {itemList.map((item) => {
-        return <Link to={`/${item.id}`} ><FruitContainer key={item.id}>
+        return <Link to={`/items/${item.id}`} ><FruitContainer>
             <p>{item.name} </p>
             <p>{item.latinName}</p>
             <FruitImage src={item.imageSrc}></FruitImage>

@@ -29,7 +29,7 @@ const App = (props) => {
             <Route exact path="/about">
               <About />
             </Route>
-            <Route path="/:itemId">
+            <Route path="/items/:itemId">
               <ItemPost />
              </Route>
           </Switch>

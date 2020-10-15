@@ -9,7 +9,7 @@ const Home = () => {
         <h2>Homepage</h2>
         <p>Fruit emporium sells the finest fruits from this world and beyond.</p>
         <p>Browse items:</p>
-        <ListingGrid itemList={Object.values(items)}/>
+        <ListingGrid itemList={Object.values(items)} />
         </div>
 }
 
