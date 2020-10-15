@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const Title = styled.h1`
     color: black;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Arial Black", Gadget, sans-serif;
 `;
 
 const NavBar = styled.div`
@@ -13,6 +13,9 @@ const NavBar = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    width: 800px;
+    margin: auto;
 `;
 
 const NavLinks = styled.div`
@@ -26,7 +29,7 @@ const StyledLink = styled(NavLink)`
   display: inline;
   margin-left: 1rem;
   text-decoration: none;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Arial Black", Gadget, sans-serif;
 
   &:hover {
     text-decoration: underline;
