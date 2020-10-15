@@ -12,7 +12,6 @@ const ItemContainer = styled.div`
 
 const ItemDetailsContainer = styled.div`
     padding-left: 20px;
-
     & h2 {
         font-family: "Arial Black", Gadget, sans-serif;
     }
@@ -42,6 +41,11 @@ const Button = styled.button`
     color: white;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #8c4183;
+    }
 `;
 
 const DetailText = styled.p`
@@ -71,11 +75,11 @@ const FruitLatinN = styled.p`
 const ItemDetails = () => {
    const params = useParams();
    const fruit = items[params.itemId];
-   let outOfStock;
+   let stockStatus;
    if (fruit.quantity == 0) {
-    outOfStock = 'Out of stock';
+    stockStatus = 'Out of stock';
    } else {
-      outOfStock = <Button>${fruit.price} - Buy now</Button>
+      stockStatus = <Button>${fruit.price} - Buy now</Button>
    }
   
     return <ItemContainer>
@@ -85,7 +89,7 @@ const ItemDetails = () => {
       <FruitLatinN>{fruit.latinName}</FruitLatinN>
       <DetailText>{fruit.description}</DetailText>
       <DetailText>Product of <em>{fruit.countryOfOrigin}</em></DetailText>
-      <BoldGreyText>{outOfStock}</BoldGreyText>
+      <BoldGreyText>{stockStatus}</BoldGreyText>
       <SellerContainer>
           <div><SellerAvatar src={sellers[fruit.sellerId].avatarSrc}></SellerAvatar></div>
           <div><DetailText>Sold by: <BoldText>{sellers[fruit.sellerId].storeName}</BoldText></DetailText></div>          
