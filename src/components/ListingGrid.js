@@ -4,15 +4,18 @@ import styled from 'styled-components'
 import { Link } from "react-router-dom";
 
 const FruitImage = styled.img`
-    width: 160px;
+    width: 180px;
+    border-radius: 8px;
 `;
 
 const FruitContainer = styled.div`
     display: inline-block;
     padding: 10px;
-    border: 1px solid gray;
+    border: none;
     margin: 30px;
     border-radius: 20px;
+    color: #4d4d4d;
+    border: 1px solid #cccccc;
 `;
 
 const FruitName = styled.p`
