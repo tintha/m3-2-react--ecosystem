@@ -10,7 +10,7 @@ import Home from './Home';
 import About from './About';
 import ItemDetails from './ItemDetails';
 
-const App = (props) => {
+const App = () => {
    return (
     <div>
       <Router>

@@ -32,7 +32,7 @@ const StyledLink = styled(NavLink)`
   font-family: "Arial Black", Gadget, sans-serif;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: #cc43a1;
   }
   &.active {
@@ -46,8 +46,8 @@ const Header = () => {
             <NavBar>
                 <Title>Fruit Emporium</Title>
             <NavLinks>
-                <StyledLink exact to="/" activeStyle={{color: '#b16fbf', textDecoration: 'underline', fontWeight: 'bolder'}}>Home</StyledLink>
-                <StyledLink exact to="/about" activeStyle={{color: '#b16fbf', textDecoration: 'underline', fontWeight: 'bolder'}}>About</StyledLink>          
+                <StyledLink exact to="/" activeStyle={{color: '#b16fbf', borderBottom: "4px solid #b16fbf", fontWeight: 'bolder'}}>Home</StyledLink>
+                <StyledLink exact to="/about" activeStyle={{color: '#b16fbf', borderBottom: "4px solid #b16fbf", fontWeight: 'bolder'}}>About</StyledLink>          
             </NavLinks>            
             </NavBar>
         </header>
